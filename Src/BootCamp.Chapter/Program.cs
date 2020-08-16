@@ -22,10 +22,12 @@ namespace BootCamp.Chapter
             Console.WriteLine("Please enter a weight in kilograms: ");
             var weight = double.Parse(Console.ReadLine());
 
-            Console.WriteLine($"{firstName} {lastName} is {age} years old, his weight is {weight} kg and his height is {height * 100} meters.");
+            Console.WriteLine($"{firstName} {lastName} is {age} years old, his weight is {weight} kg and his height is {height * 100} centimeters.");
                         
+            // formula that is used to calculate the bmi
             var bmi = weight / (height * height);
 
+            // output rounded bmi - rounding is happening to make number look nicer (xx.xx rather than xx.xxxxxxxx)
             Console.WriteLine($"Their BMI is: {Math.Round(bmi, 2)}.");
         }
     }
