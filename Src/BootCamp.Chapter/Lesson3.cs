@@ -29,7 +29,23 @@ namespace BootCamp.Chapter
         public static int PromptInt(string message)
         {
             Console.WriteLine(message);
-            var input = int.Parse(Console.ReadLine());
+            var userInput = Console.ReadLine();
+            var isNumber = int.TryParse(userInput, out int input);
+                  
+            if (string.IsNullOrEmpty(userInput))
+            {
+                return 0;
+            }
+            else if (!isNumber)
+            {
+                Console.Write($"\"{userInput}\" is not a valid number.");
+                return -1;
+            }
+            else if (isNumber && input == 0)
+            {
+                Console.Write($"\"{input}\" is not a valid number.");
+                return 0;
+            }
 
             return input;
         }
@@ -38,6 +54,11 @@ namespace BootCamp.Chapter
         {
             Console.WriteLine(message);
             var input = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(input))
+            {
+                return "-";
+            }
 
             return input;
         }
