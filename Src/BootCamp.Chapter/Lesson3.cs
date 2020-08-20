@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -47,7 +48,7 @@ namespace BootCamp.Chapter
         public static float PromptFloat(string message)
         {
             Console.WriteLine(message);
-            var input = float.Parse(Console.ReadLine());
+            var input = float.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             return input;
         }
