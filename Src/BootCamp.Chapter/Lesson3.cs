@@ -28,7 +28,7 @@ namespace BootCamp.Chapter
 
         }
 
-        static int PromptInt(string message)
+        public static int PromptInt(string message)
         {
             Console.WriteLine(message + "?");
             var input = int.Parse(Console.ReadLine());
@@ -36,7 +36,7 @@ namespace BootCamp.Chapter
             return input;
         }
 
-        static string PromptString(string message)
+        public static string PromptString(string message)
         {
             Console.WriteLine(message + "?");
             var input = Console.ReadLine();
@@ -44,7 +44,7 @@ namespace BootCamp.Chapter
             return input;
         }
 
-        static float PromptFloat(string message)
+        public static float PromptFloat(string message)
         {
             Console.WriteLine(message + "?");
             var input = float.Parse(Console.ReadLine());
@@ -52,7 +52,7 @@ namespace BootCamp.Chapter
             return input;
         }
 
-        static float CalculateBmi(float weight, float height)
+        public static float CalculateBmi(float weight, float height)
         {
             var bmi = weight / (height * height);
 
