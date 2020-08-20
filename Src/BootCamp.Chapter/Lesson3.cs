@@ -30,7 +30,7 @@ namespace BootCamp.Chapter
 
         public static int PromptInt(string message)
         {
-            Console.WriteLine(message + "?");
+            Console.WriteLine(message);
             var input = int.Parse(Console.ReadLine());
                         
             return input;
@@ -38,7 +38,7 @@ namespace BootCamp.Chapter
 
         public static string PromptString(string message)
         {
-            Console.WriteLine(message + "?");
+            Console.WriteLine(message);
             var input = Console.ReadLine();
 
             return input;
@@ -46,7 +46,7 @@ namespace BootCamp.Chapter
 
         public static float PromptFloat(string message)
         {
-            Console.WriteLine(message + "?");
+            Console.WriteLine(message);
             var input = float.Parse(Console.ReadLine());
 
             return input;
